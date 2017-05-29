@@ -1,14 +1,13 @@
 self.addEventListener('push', function (event) {
 
   console.log('[Service Worker] Push Received.');
-  console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+  console.log('[Service Worker] Push had this data: "${event.data.text()}"');
 
   const title = 'Título de la notificación';
   const options = {
     body: 'Contenido de la notificación.',
     icon: 'images/icon.png',
-    image: 'images/badge.jpg',
-    badge: 'images/badge.jpg'
+    image: 'https://webpush-webpusht.1d35.starter-us-east-1.openshiftapps.com/demo/web-push-php-example/src/images/badge.jpg'
   };
 
   event.waitUntil(self.registration.showNotification(title, options));
