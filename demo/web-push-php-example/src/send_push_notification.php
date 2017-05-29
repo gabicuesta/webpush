@@ -19,7 +19,7 @@ $webPush = new WebPush($auth);
 
 $res = $webPush->sendNotification(
     $subscription['endpoint'],
-    "Hello!",
+    "Contenido del mensaje",
     $subscription['key'],
     $subscription['token'],
     true
