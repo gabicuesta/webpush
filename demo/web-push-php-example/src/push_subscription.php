@@ -25,9 +25,18 @@ switch ($method) {
         $bd->exec($query);
         break;
     case 'PUT':
-        // update the key and token of subscription corresponding to the endpoint
-        $query = "INSERT INTO subs (endpoint,subkey,token,dateTime,active) VALUES ('". $subscription['endpoint'] ."','". $subscription['key'] ."','". $subscription['token'] ."','". time() ."','1')";
-        $bd->exec($query);
+        $query = "SELECT COUNT(endpoint) AS counter FROM subs WHERE endpoint='". $subscription['endpoint'] ."'";
+        $ret = $bd->query($query);
+
+        $counter = 0;
+        while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
+          $counter = $row["counter"];
+        }
+        if($counter==0){
+          // update the key and token of subscription corresponding to the endpoint
+          $query = "INSERT INTO subs (endpoint,subkey,token,dateTime,active) VALUES ('". $subscription['endpoint'] ."','". $subscription['key'] ."','". $subscription['token'] ."','". time() ."','1')";
+          $bd->exec($query);
+        }
         break;
     case 'DELETE':
         // delete the subscription corresponding to the endpoint
