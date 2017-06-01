@@ -35,6 +35,9 @@ switch ($method) {
         break;
     case 'PUT':
         // update the key and token of subscription corresponding to the endpoint
+        $query = "SELECT * FROM subs WHERE enpoint='". $subscription['endpoint'] ."'";
+        $ret = $bd->query($query);
+        
         $contador = 0;
         while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
             $contador = 1;
