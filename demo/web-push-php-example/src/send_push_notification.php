@@ -43,14 +43,9 @@ $query = "SELECT * FROM subs";
 $ret = $bd->query($query);
 
 while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
-    $endpoint = $row[1];
-    $key      = $row[2];
-    $token    = $row[3];
-
-    echo("....");
-    echo($endpoint ."<br/>");
-    echo($key ."<br/>");
-    echo($token ."<br/>");
+    $endpoint = $row['endpoint'];
+    $key      = $row['subkey'];
+    $token    = $row['token'];
 
     $res = $webPush->sendNotification(
         $endpoint,
