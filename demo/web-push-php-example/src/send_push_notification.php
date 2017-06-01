@@ -47,6 +47,11 @@ while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
     $key      = $row[2];
     $token    = $row[3];
 
+    echo("....");
+    echo($endpoint ."<br/>");
+    echo($key ."<br/>");
+    echo($token ."<br/>");
+
     $res = $webPush->sendNotification(
         $endpoint,
         "{mensaje:'Contenido del mensaje'}",
