@@ -40,7 +40,7 @@ class MiBD extends SQLite3
 $bd = new MiBD();
 
 $query = "SELECT * FROM subs";
-$ret = $db->query($query);
+$ret = $bd->query($query);
 
 while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
     $endpoint = $row[1];
