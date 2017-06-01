@@ -7,7 +7,7 @@ self.addEventListener('push', function (event) {
   const options = {
     body: 'Contenido de la notificación.',
     icon: 'images/icon.png',
-    image: 'https://webpush-webpusht.1d35.starter-us-east-1.openshiftapps.com/demo/web-push-php-example/src/images/badge.jpg'
+    image: 'images/badge.jpg'
   };
 
   event.waitUntil(self.registration.showNotification(title, options));
