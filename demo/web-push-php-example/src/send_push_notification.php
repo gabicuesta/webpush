@@ -16,7 +16,7 @@ $auth = array(
 );
 
 $webPush = new WebPush($auth);
-
+/*
 $res = $webPush->sendNotification(
     $subscription['endpoint'],
     "Contenido del mensaje",
@@ -24,5 +24,34 @@ $res = $webPush->sendNotification(
     $subscription['token'],
     true
 );
+*/
 
 // handle eventual errors here, and remove the subscription from your server if it is expired
+
+
+class MiBD extends SQLite3
+{
+    function __construct()
+    {
+        $this->open('database.sqlite');
+    }
+}
+
+$bd = new MiBD();
+
+$query = "SELECT * FROM subs";
+$ret = $db->query($query);
+
+while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
+    $endpoint = $row[1];
+    $key      = $row[2];
+    $token    = $row[3];
+
+    $res = $webPush->sendNotification(
+        $endpoint,
+        "{mensaje:'Contenido del mensaje'}",
+        $key,
+        $token,
+        true
+    );
+}
