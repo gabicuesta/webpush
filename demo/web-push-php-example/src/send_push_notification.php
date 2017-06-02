@@ -2,9 +2,14 @@
 require __DIR__ . '/../../vendor/autoload.php';
 use Minishlink\WebPush\WebPush;
 
-// here I'll get the subscription endpoint in the POST parameters
-// but in reality, you'll get this information in your database
-// because you already stored it (cf. push_subscription.php)
+class MiBD extends SQLite3
+{
+    function __construct()
+    {
+        $this->open('database.sqlite');
+    }
+}
+
 $subscription = json_decode(file_get_contents('php://input'), true);
 
 $auth = array(
@@ -16,26 +21,7 @@ $auth = array(
 );
 
 $webPush = new WebPush($auth);
-/*
-$res = $webPush->sendNotification(
-    $subscription['endpoint'],
-    "Contenido del mensaje",
-    $subscription['key'],
-    $subscription['token'],
-    true
-);
-*/
-
 // handle eventual errors here, and remove the subscription from your server if it is expired
-
-
-class MiBD extends SQLite3
-{
-    function __construct()
-    {
-        $this->open('database.sqlite');
-    }
-}
 
 $bd = new MiBD();
 
@@ -47,9 +33,14 @@ while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
     $key      = $row['subkey'];
     $token    = $row['token'];
 
+    $title    = "Título del mensaje";
+    $content  = "Contenido del mensaje";
+    $icon     = "https://ssl-webpushtest2.7e14.starter-us-west-2.openshiftapps.com/demo/web-push-php-example/src/images/icon.png";
+    $image    = "https://ssl-webpushtest2.7e14.starter-us-west-2.openshiftapps.com/demo/web-push-php-example/src/images/badge.jpg";
+
     $res = $webPush->sendNotification(
         $endpoint,
-        "{mensaje:'Contenido del mensaje'}",
+        "{title:'". $title ."',content:'". $content ."',icon:'". $icon ."',image:'". $image ."'}",
         $key,
         $token,
         true
