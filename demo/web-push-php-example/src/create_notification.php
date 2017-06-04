@@ -14,7 +14,7 @@ if($_POST["create"]){
   $icon       = $_POST["icon"];
   $image      = $_POST["image"];
 
-  $sql = "INSERT INTO notifications (id_customer,title,body,logo,image,time) VALUES ";
+  $sql = "INSERT INTO notifications (id_customers,title,body,logo,image,time) VALUES ";
   $sql .= "('". $customer ."'";
   $sql .= ",'". $title ."'";
   $sql .= ",'". $content ."'";
