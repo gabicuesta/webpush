@@ -36,7 +36,7 @@ while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
 }
 
 
-$query = "SELECT * FROM subs";
+$query = "SELECT * FROM subs ORDER BY id_notifications DESC LIMIT 0,1";
 $ret = $bd->query($query);
 
 while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
