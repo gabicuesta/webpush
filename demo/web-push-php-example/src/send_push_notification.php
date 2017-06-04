@@ -25,6 +25,17 @@ $webPush = new WebPush($auth);
 
 $bd = new MiBD();
 
+$query = "SELECT * FROM notifications";
+$ret = $bd->query($query);
+
+while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
+  $title    = $row['title'];
+  $content  = $row['body'];
+  $icon     = $row['logo'];
+  $image    = $row['image'];
+}
+
+
 $query = "SELECT * FROM subs";
 $ret = $bd->query($query);
 
@@ -32,12 +43,12 @@ while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
     $endpoint = $row['endpoint'];
     $key      = $row['subkey'];
     $token    = $row['token'];
-
+/*
     $title    = "Título del mensaje";
     $content  = "Contenido del mensaje";
     $icon     = "https://ssl-webpushtest2.7e14.starter-us-west-2.openshiftapps.com/demo/web-push-php-example/src/images/icon.png";
     $image    = "https://ssl-webpushtest2.7e14.starter-us-west-2.openshiftapps.com/demo/web-push-php-example/src/images/badge.jpg";
-
+*/
     $res = $webPush->sendNotification(
         $endpoint,
         "{title:'". $title ."',content:'". $content ."',icon:'". $icon ."',image:'". $image ."'}",
