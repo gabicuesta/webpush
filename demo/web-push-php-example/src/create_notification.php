@@ -40,6 +40,7 @@ if($_POST["create"]){
     <option value="1">Customer 1</option>
     <option value="2">Customer 2</option>
   </select>
+  <br/>
   Title: <input type="text" name="title" />
   <br/>
   Content: <textarea name="content"></textarea>
@@ -47,6 +48,8 @@ if($_POST["create"]){
   Icon: <input type="text" name="icon" />
   <br/>
   Image: <input type="text" name="image" />
+  <br/>
+  <input type="submit" value="Enviar" />
 </form>
 </body>
 </html>
