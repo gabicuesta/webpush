@@ -10,9 +10,9 @@ self.addEventListener('push', function (event) {
 
   const title = jsonReceived['title'];
   const options = {
-    body: 'Contenido de la notificación.',
-    icon: 'images/icon.png',
-    image: 'images/badge.jpg'
+    body: jsonReceived['content'],
+    icon: jsonReceived['icon'],
+    image: jsonReceived['image']
   };
 
   event.waitUntil(self.registration.showNotification(title, options));
