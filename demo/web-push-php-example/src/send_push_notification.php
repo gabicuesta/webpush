@@ -25,7 +25,7 @@ $webPush = new WebPush($auth);
 
 $bd = new MiBD();
 
-$query = "SELECT * FROM notifications";
+$query = "SELECT * FROM notifications ORDER BY id_notifications DESC LIMIT 0,1";
 $ret = $bd->query($query);
 
 while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
@@ -36,7 +36,7 @@ while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
 }
 
 
-$query = "SELECT * FROM subs ORDER BY id_notifications DESC LIMIT 0,1";
+$query = "SELECT * FROM subs";
 $ret = $bd->query($query);
 
 while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
@@ -51,7 +51,7 @@ while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
 */
     $res = $webPush->sendNotification(
         $endpoint,
-        "{title:'". $title ."',content:'". $content ."',icon:'". $icon ."',image:'". $image ."'}",
+        "{\"title:\"". $title ."\",\"content:\"". $content ."\",icon:\"". $icon ."\",image:\"". $image ."\"}",
         $key,
         $token,
         true
