@@ -51,7 +51,7 @@ while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
 */
     $res = $webPush->sendNotification(
         $endpoint,
-        "{\"title:\"". $title ."\",\"content:\"". $content ."\",icon:\"". $icon ."\",image:\"". $image ."\"}",
+        "{\"title\":\"". $title ."\",\"content\":\"". $content ."\",\"icon\":\"". $icon ."\",\"image\":\"". $image ."\"}",
         $key,
         $token,
         true
