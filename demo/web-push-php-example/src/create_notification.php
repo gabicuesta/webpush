@@ -1,4 +1,6 @@
 <?php
+require("config.inc.php");
+
 class MiBD extends SQLite3
 {
     function __construct()
@@ -22,9 +24,11 @@ if($_POST["create"]){
   $sql .= ",'". $image ."'";
   $sql .= ",'". time() ."')";
 
+  /*
   $bd = new MiBD();
   $bd->query($sql);
-
+  */
+  $conn->query($sql);
   echo("<b>Notification created.</b><br/>");
 }
 ?>

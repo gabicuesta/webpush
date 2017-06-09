@@ -2,6 +2,8 @@
 require __DIR__ . '/../../vendor/autoload.php';
 use Minishlink\WebPush\WebPush;
 
+require("config.inc.php");
+
 class MiBD extends SQLite3
 {
     function __construct()

@@ -1,4 +1,6 @@
 <?php
+require("config.inc.php");
+
 $subscription = json_decode(file_get_contents('php://input'), true);
 
 if (!isset($subscription['endpoint'])) {
