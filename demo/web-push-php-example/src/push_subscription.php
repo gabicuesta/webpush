@@ -25,7 +25,7 @@ switch ($method) {
 	
         if($counter==0){
           // update the key and token of subscription corresponding to the endpoint
-            $query = "INSERT INTO subs (endpoint,subkey,token,datetime,active) VALUES ('". $subscription['endpoint'] ."','". $subscription['key'] ."','". $subscription['token'] ."','". time() ."','1')";
+            $query = "INSERT INTO subs (endpoint,subkey,token,active) VALUES ('". $subscription['endpoint'] ."','". $subscription['key'] ."','". $subscription['token'] ."','1')";
 	    $conn->query($query);
         }
         break;
