@@ -1,36 +1,27 @@
 <?php
 require("config.inc.php");
 
-class MiBD extends SQLite3
-{
-    function __construct()
-    {
-        $this->open('database.sqlite');
-    }
-}
-
 if($_POST["create"]){
+
   $customer   = $_POST["customer"];
   $title      = $_POST["title"];
   $content    = $_POST["content"];
   $icon       = $_POST["icon"];
   $image      = $_POST["image"];
 
-  $sql = "INSERT INTO notifications (id_customers,title,body,logo,image,dateTime) VALUES ";
+  $sql = "INSERT INTO notifications (id_customers,title,body,logo,image) VALUES ";
   $sql .= "('". $customer ."'";
   $sql .= ",'". $title ."'";
   $sql .= ",'". $content ."'";
   $sql .= ",'". $icon ."'";
-  $sql .= ",'". $image ."'";
-  $sql .= ",'". time() ."')";
+  $sql .= ",'". $image ."')";
 
-  /*
-  $bd = new MiBD();
-  $bd->query($sql);
-  */
+  echo("<br/>". $sql ."<br/>");
   $conn->query($sql);
   echo("<b>Notification created.</b><br/>");
+
 }
+
 ?>
 <html>
 <head>

@@ -1,17 +1,11 @@
 <?php
+
 require __DIR__ . '/../../vendor/autoload.php';
+
 use Minishlink\WebPush\WebPush;
 
 require("config.inc.php");
-
-class MiBD extends SQLite3
-{
-    function __construct()
-    {
-        $this->open('database.sqlite');
-    }
-}
-
+die;
 $subscription = json_decode(file_get_contents('php://input'), true);
 
 $auth = array(
@@ -25,32 +19,25 @@ $auth = array(
 $webPush = new WebPush($auth);
 // handle eventual errors here, and remove the subscription from your server if it is expired
 
-$bd = new MiBD();
 
 $query = "SELECT * FROM notifications ORDER BY id_notifications DESC LIMIT 0,1";
-$ret = $bd->query($query);
+$ret = $conn->query($query);
 
-while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
-  $title    = $row['title'];
-  $content  = $row['body'];
-  $icon     = $row['logo'];
-  $image    = $row['image'];
-}
+$row=mysqli_fetch_array($result,MYSQLI_NUM);
 
+$title    = $row[0]['title'];
+$content  = $row[0]['body'];
+$icon     = $row[0]['logo'];
+$image    = $row[0]'image'];
 
 $query = "SELECT * FROM subs";
-$ret = $bd->query($query);
+$ret = $conn->query($query);
 
 while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
     $endpoint = $row['endpoint'];
     $key      = $row['subkey'];
     $token    = $row['token'];
-/*
-    $title    = "Título del mensaje";
-    $content  = "Contenido del mensaje";
-    $icon     = "https://ssl-webpushtest2.7e14.starter-us-west-2.openshiftapps.com/demo/web-push-php-example/src/images/icon.png";
-    $image    = "https://ssl-webpushtest2.7e14.starter-us-west-2.openshiftapps.com/demo/web-push-php-example/src/images/badge.jpg";
-*/
+
     $res = $webPush->sendNotification(
         $endpoint,
         "{\"title\":\"". $title ."\",\"content\":\"". $content ."\",\"icon\":\"". $icon ."\",\"image\":\"". $image ."\"}",
