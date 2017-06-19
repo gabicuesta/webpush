@@ -64,11 +64,11 @@
       <file leaf-file-name="create_notifications.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create_notifications.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+            <state relative-caret-position="250">
+              <caret line="28" column="82" lean-forward="true" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
               <folding>
                 <element signature="e#6#96#0#PHP" expanded="true" />
-                <marker date="1497903921000" expanded="true" signature="341:410" ph="INSERT INTO notifications... " />
+                <marker date="1497907446000" expanded="true" signature="341:410" ph="INSERT INTO notifications... " />
               </folding>
             </state>
           </provider>
@@ -234,12 +234,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497901611291</updated>
-      <workItem from="1497901613830" duration="2272000" />
+      <workItem from="1497901613830" duration="2453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2272000" />
+    <option name="totallyTimeSpent" value="2453000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
@@ -328,11 +328,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create_notifications.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        <state relative-caret-position="250">
+          <caret line="28" column="82" lean-forward="true" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
           <folding>
             <element signature="e#6#96#0#PHP" expanded="true" />
-            <marker date="1497903921000" expanded="true" signature="341:410" ph="INSERT INTO notifications... " />
+            <marker date="1497907446000" expanded="true" signature="341:410" ph="INSERT INTO notifications... " />
           </folding>
         </state>
       </provider>

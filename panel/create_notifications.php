@@ -26,7 +26,7 @@ if($_POST["create"]){
     echo("<br/>". $sql ."<br/>");
     $conn->query($sql);
     echo("<b>Notification created.</b><br/>");
-    echo("<p><a href=\"../demo/web-push-php-example/src/send_push_notification.php\">Enviar notificación</a></p>");
+    echo("<p><a href=\"send_push_notification.php\">Enviar notificación</a></p>");
 
 }
 
