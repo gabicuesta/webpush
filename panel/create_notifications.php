@@ -36,7 +36,7 @@ if($_POST["create"]){
     <title>Create notification</title>
 </head>
 <body>
-<form method="post" action="create_notification.php">
+<form method="post" action="create_notifications.php">
     <input type="hidden" name="create" value="1" />
     Customer:
     <select name="customer">
