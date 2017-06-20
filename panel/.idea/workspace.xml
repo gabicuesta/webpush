@@ -52,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/users.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+              <caret line="23" column="14" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="23" selection-end-column="14" />
               <folding>
                 <element signature="e#6#96#0#PHP" expanded="true" />
                 <marker date="1497903412000" expanded="true" signature="136:176" ph="SELECT * FRO... subs" />
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_notifications.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create_notifications.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_notifications.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="420">
               <caret line="28" column="82" lean-forward="true" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
               <folding>
                 <element signature="e#6#96#0#PHP" expanded="true" />
@@ -74,13 +74,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customers.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="customers.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/customers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="330">
+              <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding>
                 <element signature="e#6#96#0#PHP" expanded="true" />
+                <marker date="1497943519000" expanded="true" signature="176:226" ph="SELECT * FRO... customers" />
               </folding>
             </state>
           </provider>
@@ -94,9 +95,9 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/menu.php" />
         <option value="$PROJECT_DIR$/config.inc.php" />
-        <option value="$PROJECT_DIR$/customers.php" />
         <option value="$PROJECT_DIR$/users.php" />
         <option value="$PROJECT_DIR$/create_notifications.php" />
+        <option value="$PROJECT_DIR$/customers.php" />
       </list>
     </option>
   </component>
@@ -234,12 +235,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497901611291</updated>
-      <workItem from="1497901613830" duration="2453000" />
+      <workItem from="1497901613830" duration="2848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2453000" />
+    <option name="totallyTimeSpent" value="2848000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
@@ -305,12 +306,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customers.php">
+    <entry file="file://$PROJECT_DIR$/create_notifications.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="420">
+          <caret line="28" column="82" lean-forward="true" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
           <folding>
             <element signature="e#6#96#0#PHP" expanded="true" />
+            <marker date="1497907446000" expanded="true" signature="341:410" ph="INSERT INTO notifications... " />
           </folding>
         </state>
       </provider>
@@ -318,7 +320,7 @@
     <entry file="file://$PROJECT_DIR$/users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <caret line="23" column="14" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="23" selection-end-column="14" />
           <folding>
             <element signature="e#6#96#0#PHP" expanded="true" />
             <marker date="1497903412000" expanded="true" signature="136:176" ph="SELECT * FRO... subs" />
@@ -326,13 +328,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_notifications.php">
+    <entry file="file://$PROJECT_DIR$/customers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="28" column="82" lean-forward="true" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+        <state relative-caret-position="330">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding>
             <element signature="e#6#96#0#PHP" expanded="true" />
-            <marker date="1497907446000" expanded="true" signature="341:410" ph="INSERT INTO notifications... " />
+            <marker date="1497943519000" expanded="true" signature="176:226" ph="SELECT * FRO... customers" />
           </folding>
         </state>
       </provider>
