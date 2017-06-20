@@ -20,8 +20,8 @@ echo("<ul>");
 if ($ret->num_rows > 0) {
     while($row = $ret->fetch_assoc()) {
         echo("<li>");
-        echo("-->". $row['name']);
-        echo("<li>");
+        echo($row['name']);
+        echo("</li>");
     }
 }
 
