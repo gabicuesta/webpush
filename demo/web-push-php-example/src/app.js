@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const key = subscription.getKey('p256dh');
         const token = subscription.getKey('auth');
 
-        return fetch('push_subscription.php', {
+        return fetch('https://avisohub.com/webpush/demo/web-push-php-example/src/push_subscription.php', {
             method,
             body: JSON.stringify({
                 endpoint: subscription.endpoint,
