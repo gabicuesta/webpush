@@ -6,7 +6,7 @@
  * Time: 21:51
  */
 ?>
-
+<title>Panel de control</title>
 <ul>
     <li><a href="customers.php">Clientes</a></li>
     <li><a href="create_notifications.php">Crear notificaciones</a></li>

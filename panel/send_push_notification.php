@@ -42,7 +42,7 @@ if ($ret->num_rows > 0) {
         	true
     	);
     }
-    echo("Notificaciones enviadas.<br/><br/><a href=\"menu.php\"></a>");
+    echo("Notificaciones enviadas.<br/><br/><a href=\"menu.php\">Menú</a>");
 } else {
     echo "0 results";
 }

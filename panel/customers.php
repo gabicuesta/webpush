@@ -11,7 +11,8 @@ require("config.inc.php");
 // Formulario de inserción
 
 
-// Listado
+echo("<h2>Listado de clientes</h2>");
+
 $query = "SELECT * FROM customers ORDER BY id_customers DESC";
 $ret = $conn->query($query);
 
