@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    //const customerKey = "ADyzhasjquds81388sdjsjaasnsannasn";
     const applicationServerKey = "BCmti7ScwxxVAlB7WAyxoOXtV7J8vVCXwEDIFXjKvD-ma-yJx_eHJLdADyyzzTKRGb395bSAtxlh4wuDycO3Ih4";
     let isPushEnabled = false;
 
@@ -173,12 +174,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function push_sendSubscriptionToServer(subscription, method) {
-        const key = subscription.getKey('p256dh');
+	const key = subscription.getKey('p256dh');
         const token = subscription.getKey('auth');
+
         //https://avisohub.com/webpush/demo/web-push-php-example/src/
-        return fetch('push_subscription.php', {
+        return fetch('https://avisohub.com/webpush/demo/web-push-php-example/src/push_subscription.php', {
             method,
+	    mode:'cors',
             body: JSON.stringify({
+		customerKey:customerKey,
                 endpoint: subscription.endpoint,
                 key: key ? btoa(String.fromCharCode.apply(null, new Uint8Array(key))) : null,
                 token: token ? btoa(String.fromCharCode.apply(null, new Uint8Array(token))) : null
@@ -209,9 +213,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const key = subscription.getKey('p256dh');
             const token = subscription.getKey('auth');
 
-            fetch('send_push_notification.php', {
+            fetch('https://avisohub.com/webpush/demo/web-push-php-example/src/send_push_notification.php', {
                 method: 'POST',
                 body: JSON.stringify({
+		    customerKey: customerKey,
                     endpoint: subscription.endpoint,
                     key: key ? btoa(String.fromCharCode.apply(null, new Uint8Array(subscription.getKey('p256dh')))) : null,
                     token: token ? btoa(String.fromCharCode.apply(null, new Uint8Array(subscription.getKey('auth')))) : null

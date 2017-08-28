@@ -14,7 +14,7 @@ switch ($method) {
     case 'POST':
         // create a new subscription entry in your database (endpoint is unique)
         $query = "INSERT INTO subs (endpoint,subkey,token,datetime,active) VALUES ('". $subscription['endpoint'] ."','". $subscription['key'] ."','". $subscription['token'] ."','". time() ."','1')";
-        $conn->query($query);
+	$conn->query($query);
         break;
     case 'PUT':
         $query = "SELECT COUNT(endpoint) AS counter FROM subs WHERE endpoint='". $subscription['endpoint'] ."'";
